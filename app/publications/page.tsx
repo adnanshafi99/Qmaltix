@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FileText, ExternalLink, Calendar, Users } from 'lucide-react'
 import { publications, Publication } from '@/data/publications'
 
-const types = ['all', 'journal', 'conference', 'workshop', 'preprint'] as const
+const types = ['all', 'journal', 'conference', 'preprint', 'ongoing', 'accepted'] as const
 
 export default function Publications() {
   const [selectedType, setSelectedType] = useState<string>('all')
@@ -24,10 +24,12 @@ export default function Publications() {
         return 'bg-blue-100 text-blue-800'
       case 'conference':
         return 'bg-green-100 text-green-800'
-      case 'workshop':
-        return 'bg-yellow-100 text-yellow-800'
       case 'preprint':
         return 'bg-gray-100 text-gray-800'
+      case 'ongoing':
+        return 'bg-purple-100 text-purple-800'
+      case 'accepted':
+        return 'bg-orange-100 text-orange-800'
       default:
         return 'bg-gray-100 text-gray-800'
     }
@@ -60,8 +62,9 @@ export default function Publications() {
               <option value="all">All Types</option>
               <option value="journal">Journal</option>
               <option value="conference">Conference</option>
-              <option value="workshop">Workshop</option>
               <option value="preprint">Preprint</option>
+              <option value="ongoing">Ongoing</option>
+              <option value="accepted">Accepted</option>
             </select>
             <select
               value={selectedYear}

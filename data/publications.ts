@@ -4,7 +4,7 @@ export interface Publication {
   authors: string[]
   venue: string
   year: number
-  type: 'journal' | 'conference' | 'workshop' | 'preprint'
+  type: 'journal' | 'conference' | 'preprint' | 'ongoing' | 'accepted'
   link?: string
   abstract?: string
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Facebook } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -79,14 +79,23 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-4 pt-2">
-                <a href="#" className="hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+                <a 
+                  href="https://www.linkedin.com/company/qmaltix-lab/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-400 transition-colors" 
+                  aria-label="LinkedIn"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="#" className="hover:text-primary-400 transition-colors" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a href="#" className="hover:text-primary-400 transition-colors" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
+                <a 
+                  href="https://www.facebook.com/people/Qmaltix-Lab/61578988760620/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-400 transition-colors" 
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
                 </a>
               </li>
             </ul>
