@@ -112,13 +112,38 @@ qmaltix/
 2. Add a `page.tsx` file
 3. Update the navigation in `components/Header.tsx`
 
+## Blog Integration with Social Media
+
+The blog automatically syncs posts from LinkedIn and Facebook. To enable this:
+
+### LinkedIn Setup:
+1. Create a LinkedIn App at https://www.linkedin.com/developers/apps
+2. Request access to "Marketing Developer Platform" and "Share on LinkedIn" products
+3. Generate an access token with `r_organization_social` permission
+4. Add to environment variables:
+   - `LINKEDIN_ACCESS_TOKEN`
+   - `LINKEDIN_COMPANY_ID` (optional, defaults to 'qmaltix-lab')
+
+### Facebook Setup:
+1. Create a Facebook App at https://developers.facebook.com/apps/
+2. Get a Page Access Token with `pages_read_engagement` permission
+3. Add to environment variables:
+   - `FACEBOOK_ACCESS_TOKEN`
+   - `FACEBOOK_PAGE_ID` (optional, defaults to '61578988760620')
+
+### Environment Variables:
+Copy `.env.example` to `.env.local` and fill in your API credentials.
+
+For Vercel deployment, add these as Environment Variables in your project settings.
+
 ## Deployment
 
 The easiest way to deploy is using [Vercel](https://vercel.com):
 
 1. Push your code to GitHub
 2. Import your repository in Vercel
-3. Vercel will automatically detect Next.js and deploy
+3. Add environment variables in Vercel Settings > Environment Variables
+4. Vercel will automatically detect Next.js and deploy
 
 ## License
 

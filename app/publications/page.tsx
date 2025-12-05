@@ -12,11 +12,13 @@ export default function Publications() {
 
   const years = Array.from(new Set(publications.map(p => p.year))).sort((a, b) => b - a)
 
-  const filteredPublications = publications.filter(pub => {
-    const typeMatch = selectedType === 'all' || pub.type === selectedType
-    const yearMatch = selectedYear === 'all' || pub.year.toString() === selectedYear
-    return typeMatch && yearMatch
-  })
+  const filteredPublications = publications
+    .filter(pub => {
+      const typeMatch = selectedType === 'all' || pub.type === selectedType
+      const yearMatch = selectedYear === 'all' || pub.year.toString() === selectedYear
+      return typeMatch && yearMatch
+    })
+    .sort((a, b) => b.year - a.year) // Sort by year descending (latest first)
 
   const getTypeColor = (type: string) => {
     switch (type) {

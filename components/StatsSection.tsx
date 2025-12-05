@@ -1,13 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Users, FileText, Award, Globe } from 'lucide-react'
+import { Users, FileText, Award, FlaskConical } from 'lucide-react'
+import { leadershipTeam, researchTeam, technicalTeam } from '@/data/team'
+import { publications } from '@/data/publications'
+
+// Calculate actual stats from data
+const totalTeamMembers = leadershipTeam.length + researchTeam.length + technicalTeam.length
+const totalPublications = publications.length
+const researchAreasCount = 4 // Quantum Computing, Mathematical Modeling, AI & XAI, IoT & Edge Computing
+const applicationsCount = 3 // Cybersecurity, Healthcare, Environmental Modeling
 
 const stats = [
-  { icon: <Users className="h-8 w-8" />, value: '25+', label: 'Team Members' },
-  { icon: <FileText className="h-8 w-8" />, value: '50+', label: 'Publications' },
-  { icon: <Award className="h-8 w-8" />, value: '15+', label: 'Research Projects' },
-  { icon: <Globe className="h-8 w-8" />, value: '10+', label: 'Countries' },
+  { icon: <Users className="h-8 w-8" />, value: totalTeamMembers.toString(), label: 'Team Members' },
+  { icon: <FileText className="h-8 w-8" />, value: totalPublications.toString(), label: 'Publications' },
+  { icon: <FlaskConical className="h-8 w-8" />, value: researchAreasCount.toString(), label: 'Research Areas' },
+  { icon: <Award className="h-8 w-8" />, value: applicationsCount.toString(), label: 'Applications' },
 ]
 
 export default function StatsSection() {
