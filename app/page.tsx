@@ -3,6 +3,9 @@ import { ArrowRight, Brain, Cpu, Network, Zap } from 'lucide-react'
 import Hero from '@/components/Hero'
 import ResearchCard from '@/components/ResearchCard'
 import StatsSection from '@/components/StatsSection'
+import getMetadata from '@/metadata/utils/get-metadata'
+import SiteMetadata from '@/metadata/site-metadata'
+import SetSchemaHomePage from '@/metadata/schemas/schemaHomePage'
 
 const researchAreas = [
   {
@@ -31,9 +34,15 @@ const researchAreas = [
   },
 ]
 
+export function generateMetadata() {
+  return getMetadata(SiteMetadata.HOME)
+}
+
 export default function Home() {
   return (
-    <div className="pt-20">
+    <>
+      <SetSchemaHomePage />
+      <div className="pt-20">
       {/* Hero Section */}
       <Hero />
       
@@ -118,6 +127,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

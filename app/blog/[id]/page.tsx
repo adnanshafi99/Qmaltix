@@ -2,6 +2,29 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Calendar, User, ArrowLeft } from 'lucide-react'
 import { blogPosts } from '@/data/blog'
+import getMetadata from '@/metadata/utils/get-metadata'
+import SiteConfig from '@/metadata/site-config'
+import SetSchemaBlogPostPage from '@/metadata/schemas/schemaBlogPostPage'
+
+export function generateMetadata({ params }: { params: { id: string } }) {
+  const post = blogPosts.find(p => p.id === params.id)
+
+  if (!post) {
+    return getMetadata({
+      title: 'Blog Post Not Found',
+      description: 'The blog post you are looking for does not exist.',
+      path: `/blog/${params.id}`,
+      noindex: true,
+    })
+  }
+
+  return getMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/blog/${post.id}`,
+    keywords: post.tags,
+  })
+}
 
 export default function BlogPost({ params }: { params: { id: string } }) {
   const post = blogPosts.find(p => p.id === params.id)
@@ -11,8 +34,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="pt-20">
-      <article className="py-12 bg-white">
+    <>
+      <SetSchemaBlogPostPage post={post} />
+      <div className="pt-20">
+        <article className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <Link
@@ -81,6 +106,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
         </div>
       </article>
     </div>
+    </>
   )
 }
 

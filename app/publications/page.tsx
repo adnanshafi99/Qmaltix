@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { FileText, ExternalLink, Calendar, Users } from 'lucide-react'
+import Link from 'next/link'
+import { FileText, ExternalLink, Calendar, Users, ArrowRight } from 'lucide-react'
 import { publications, Publication } from '@/data/publications'
 
 const types = ['all', 'journal', 'conference', 'preprint', 'ongoing', 'accepted'] as const
@@ -104,7 +105,14 @@ export default function Publications() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pub.title}</h3>
+                    <Link
+                      href={`/publications/${pub.id}`}
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                        {pub.title}
+                      </h3>
+                    </Link>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-3">
                       <div className="flex items-center gap-1">
                         <Users className="h-4 w-4" />
@@ -120,7 +128,9 @@ export default function Publications() {
                       </div>
                     </div>
                     {pub.abstract && (
-                      <p className="text-gray-700 mb-4 leading-relaxed">{pub.abstract}</p>
+                      <p className="text-gray-700 mb-4 leading-relaxed line-clamp-3">
+                        {pub.abstract}
+                      </p>
                     )}
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -134,17 +144,26 @@ export default function Publications() {
                     </span>
                   </div>
                 </div>
-                {pub.link && (
-                  <a
-                    href={pub.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div className="flex items-center gap-4 flex-wrap">
+                  <Link
+                    href={`/publications/${pub.id}`}
                     className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium"
                   >
-                    Read Paper
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                )}
+                    View Details
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  {pub.link && (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium"
+                    >
+                      Read Paper
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
