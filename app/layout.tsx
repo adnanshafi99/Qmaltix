@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: 'QMALTIX Lab - Quantum Computing, AI, and Extended Intelligence',
   description: 'QMALTIX Lab is a global interdisciplinary research center focusing on Quantum Computing, Artificial Intelligence, Mathematical Modeling, IoT, and Extended Intelligence.',
   keywords: 'quantum computing, artificial intelligence, research lab, IoT, extended intelligence',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

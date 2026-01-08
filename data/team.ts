@@ -78,6 +78,7 @@ export const researchTeam: TeamMember[] = [
     bio: 'Research Assistant at QMALTIX Lab, Department of Industrial and Systems Engineering, Lamar University.',
     researchInterests: ['Industrial Systems', 'Research'],
     email: 'mshehun@lamar.edu',
+    image: 'https://i.ibb.co/Kj6WjB1F/shehun.jpg',
   },
   {
     id: '7',
@@ -86,6 +87,15 @@ export const researchTeam: TeamMember[] = [
     bio: 'Research Assistant at QMALTIX Lab, Japan-Bangladesh Robotics & Advanced Technology Research Center, Bangladesh.',
     researchInterests: ['Robotics', 'Advanced Technology', 'Research'],
     email: 'monirul.cse.utm@gmail.com',
+  },
+  {
+    id: '9',
+    name: 'Zubair Al Zami',
+    role: 'Research Assistant',
+    bio: 'Manager, Production Process Control at APEX HOLDINGS LIMITED and Research Assistant at QMALTIX Lab.',
+    researchInterests: ['Data Science', 'Data Analyst', 'Textile Engineering'],
+    email: 'zubair.actl@gmail.com',
+    image: 'https://i.ibb.co/6787Dtcc/zubair.jpg',
   },
 ]
 

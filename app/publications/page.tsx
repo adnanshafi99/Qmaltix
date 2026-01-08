@@ -14,7 +14,15 @@ export default function Publications() {
 
   const filteredPublications = publications
     .filter(pub => {
-      const typeMatch = selectedType === 'all' || pub.type === selectedType
+      let typeMatch = false
+      if (selectedType === 'all') {
+        typeMatch = true
+      } else if (selectedType === 'conference') {
+        // Include both 'conference' and 'accepted' types when filtering by conference
+        typeMatch = pub.type === 'conference' || pub.type === 'accepted'
+      } else {
+        typeMatch = pub.type === selectedType
+      }
       const yearMatch = selectedYear === 'all' || pub.year.toString() === selectedYear
       return typeMatch && yearMatch
     })
@@ -115,9 +123,16 @@ export default function Publications() {
                       <p className="text-gray-700 mb-4 leading-relaxed">{pub.abstract}</p>
                     )}
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(pub.type)}`}>
-                    {pub.type}
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {pub.type === 'accepted' && (
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor('conference')}`}>
+                        conference
+                      </span>
+                    )}
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(pub.type)}`}>
+                      {pub.type}
+                    </span>
+                  </div>
                 </div>
                 {pub.link && (
                   <a

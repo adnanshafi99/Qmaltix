@@ -74,8 +74,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:contact@qmaltixlab.org" className="text-sm hover:text-primary-400 transition-colors">
-                  contact@qmaltixlab.org
+                <a href="mailto:khaledsujon66@gmail.com" className="text-sm hover:text-primary-400 transition-colors">
+                  khaledsujon66@gmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-4 pt-2">

@@ -73,8 +73,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:contact@qmaltixlab.org" className="text-primary-600 hover:text-primary-700">
-                      contact@qmaltixlab.org
+                    <a href="mailto:khaledsujon66@gmail.com" className="text-primary-600 hover:text-primary-700">
+                      khaledsujon66@gmail.com
                     </a>
                   </div>
                 </div>
