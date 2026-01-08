@@ -41,7 +41,7 @@ export function generateMetadata({ params }: { params: { id: string } }) {
   })
 }
 
-function SetSchemaPublicationPage(publication: typeof publications[0]) {
+function SetSchemaPublicationPage({ publication }: { publication: typeof publications[0] }) {
   // Defensive check for authors - ensure we have the property
   const authors = (publication && Array.isArray(publication.authors)) ? publication.authors : []
 
