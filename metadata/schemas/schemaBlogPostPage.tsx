@@ -4,7 +4,7 @@ import { websiteId } from '../shared/website'
 import { organizationId } from '../shared/organization'
 import { BlogPost } from '@/data/blog'
 
-export default function SetSchemaBlogPostPage(post: BlogPost) {
+export default function SetSchemaBlogPostPage({ post }: { post: BlogPost }) {
   const graph = BaseSchema({
     pageSchemas: [
       {
