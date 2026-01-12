@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Mail, MapPin, Linkedin, Facebook } from 'lucide-react'
+import SiteConfig from '@/metadata/site-config'
 
 export default function Footer() {
   return (
@@ -74,8 +75,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:khaledsujon66@gmail.com" className="text-sm hover:text-primary-400 transition-colors">
-                  khaledsujon66@gmail.com
+                <a href={`mailto:${SiteConfig.email}`} className="text-sm hover:text-primary-400 transition-colors">
+                  {SiteConfig.email}
                 </a>
               </li>
               <li className="flex items-center space-x-4 pt-2">

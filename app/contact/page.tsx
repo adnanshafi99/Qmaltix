@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Mail, MapPin, Phone, Send } from 'lucide-react'
+import SiteConfig from '@/metadata/site-config'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -73,8 +74,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:khaledsujon66@gmail.com" className="text-primary-600 hover:text-primary-700">
-                      khaledsujon66@gmail.com
+                    <a href={`mailto:${SiteConfig.email}`} className="text-primary-600 hover:text-primary-700">
+                      {SiteConfig.email}
                     </a>
                   </div>
                 </div>
