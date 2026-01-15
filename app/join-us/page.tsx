@@ -31,7 +31,6 @@ const opportunities = [
 ]
 
 const benefits = [
-  'Competitive stipend and funding',
   'Access to state-of-the-art facilities',
   'Collaboration with leading researchers',
   'Conference and publication support',
