@@ -9,7 +9,7 @@ const SiteMetadata = {
   },
   ABOUT: {
     title: 'About Us',
-    description: `Learn about ${SiteConfig.fullName}, a global interdisciplinary research center focusing on Quantum Computing, Artificial Intelligence, Mathematical Modeling, IoT, and Extended Intelligence.`,
+    description: `Learn about ${SiteConfig.fullName}, a Bangladesh based non commercial interdisciplinary research center focusing on Quantum Computing, Artificial Intelligence, Mathematical Modeling, IoT, and Extended Intelligence.`,
     path: '/about',
     keywords: ['about', 'mission', 'vision', 'values', ...SiteConfig.keywords],
   },

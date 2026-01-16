@@ -16,8 +16,8 @@ const values = [
   },
   {
     icon: <Users className="h-8 w-8" />,
-    title: 'Global Partnerships',
-    description: 'Building partnerships with global institutions to foster collaboration and drive meaningful innovation.',
+    title: 'Partnerships',
+    description: 'Building partnerships with institutions to foster collaboration and drive meaningful innovation.',
   },
   {
     icon: <TrendingUp className="h-8 w-8" />,
@@ -40,7 +40,7 @@ export default function About() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">About QMALTIX Lab</h1>
               <p className="text-xl md:text-2xl leading-relaxed text-primary-100">
-                A global interdisciplinary research center advancing the frontiers of AI, Quantum Computing, and IoT
+                A Bangladesh based non commercial interdisciplinary research center advancing the frontiers of AI, Quantum Computing, and IoT
               </p>
             </motion.div>
           </div>

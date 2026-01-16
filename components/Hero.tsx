@@ -43,7 +43,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto"
           >
-            A global interdisciplinary research center creating transformative technologies, 
+            A Bangladesh based non commercial interdisciplinary research center creating transformative technologies, 
             ethical AI models, and collaborative innovations for academia and industry.
           </motion.p>
 

@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-xl font-bold mb-4">QMALTIX LAB</h3>
             <p className="text-sm leading-relaxed">
-              A global interdisciplinary research center focusing on Quantum Computing, 
+              A Bangladesh based non commercial interdisciplinary research center focusing on Quantum Computing, 
               Artificial Intelligence, Mathematical Modeling, IoT, and Extended Intelligence.
             </p>
           </div>

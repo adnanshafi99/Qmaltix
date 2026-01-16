@@ -57,7 +57,7 @@ export default function Home() {
               QMALTIX Lab is a Lab for Quantum Computing, Modeling, AI, IoT, and eXtended Intelligence
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              QMALTIX Lab is a global interdisciplinary research center focusing on Quantum Computing, 
+              QMALTIX Lab is a Bangladesh based non commercial interdisciplinary research center focusing on Quantum Computing, 
               Artificial Intelligence, Mathematical Modeling, IoT, and Extended Intelligence. We aim to 
               create transformative technologies, ethical AI models, and collaborative innovations for 
               academia and industry.

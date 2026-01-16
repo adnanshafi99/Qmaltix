@@ -23,10 +23,10 @@ const opportunities = [
   {
     icon: <Globe className="h-8 w-8" />,
     title: 'Collaborations',
-    description: 'Partner with us for research collaborations. We work with global academic and industry partners.',
+    description: 'Partner with us for research collaborations. We work with academic and industry partners.',
     duration: 'Ongoing',
     type: 'Collaboration',
-    features: ['Global academic partners', 'Industry partnerships'],
+    features: ['Academic partners', 'Industry partnerships'],
   },
 ]
 
